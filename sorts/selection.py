@@ -1,6 +1,3 @@
-from sorts.swap import swap
-
-
 def selection(lst):
     for i in range(len(lst)):
         min_index = i
@@ -9,4 +6,4 @@ def selection(lst):
                 min_index = j
 
         if min_index != i:
-            swap(lst, min_index, i)
+            lst[min_index], lst[i] = lst[i], lst[min_index]

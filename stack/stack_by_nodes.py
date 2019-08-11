@@ -1,18 +1,15 @@
 class EmptyStackError(Exception):
-
     def __init__(self, text):
         self.text = text
 
 
 class Node:
-
     def __init__(self, value=None, next=None):
         self.value = value
         self.next = next
 
 
 class Stack:
-
     def __init__(self):
         self.head = None
         self.tail = None
