@@ -3,7 +3,7 @@ def merge(left_list, right_list):
     left_index = right_index = 0
     left_length, right_length = len(left_list), len(right_list)
 
-    for _ in range(max(left_length, right_length)):
+    for _ in range(left_length + right_length):
         if left_index < left_length and right_index < right_length:
             if left_list[left_index] <= right_list[right_index]:
                 sorted_list.append(left_list[left_index])
@@ -30,4 +30,3 @@ def merge_sort(lst):
     right_list = merge_sort(lst[mid:])
 
     return merge(left_list, right_list)
-    
